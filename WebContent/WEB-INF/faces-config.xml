@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+    version="2.2">
+
+<navigation-rule>
+		<from-view-id>*</from-view-id>
+		<navigation-case>
+		<from-outcome>login_view</from-outcome>
+		<to-view-id>login.xhtml</to-view-id>
+		</navigation-case>
+		
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>login.xhtml</from-view-id>
+		<navigation-case>
+		<from-outcome>mian_menu_view</from-outcome>
+		<to-view-id>mainMenu.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+		<from-outcome>login_view</from-outcome>
+		<to-view-id>login.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	
+		<navigation-rule>
+			<from-view-id>mainMenu.xhtml</from-view-id>
+			<navigation-case>
+			<from-outcome>inv_medicina_view</from-outcome>
+			<to-view-id>inventarioAdminMedicina.xhtml</to-view-id>
+			</navigation-case>
+			<navigation-case>
+			<from-outcome>inveUsuario_view</from-outcome>
+			<to-view-id>inventarioUsuario.xhtml</to-view-id>
+			</navigation-case>
+			<navigation-case>
+			<from-outcome>medicamento_View</from-outcome>
+			<to-view-id>catalogosAdmin.xhtml</to-view-id>
+			</navigation-case>
+			<navigation-case>
+			<from-outcome>mobiliario_view</from-outcome>
+			<to-view-id>inventarioAdminMobiliario.xhtml</to-view-id>
+			</navigation-case>
+			<navigation-case>
+			<from-outcome>medicina_view</from-outcome>
+			<to-view-id>inventarioAdminMedicina.xhtml</to-view-id>
+			</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+			<from-view-id>inventarioAdminMedicina.xhtml</from-view-id>
+			<navigation-case>
+			<from-outcome>consultas_view</from-outcome>
+			<to-view-id>consulInvAdmon.xhtml</to-view-id>
+			</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+			<from-view-id>inventarioAdminMobiliario.xhtml</from-view-id>
+			<navigation-case>
+			<from-outcome>consultas_view2</from-outcome>
+			<to-view-id>consulMobiliaAdmon.xhtml</to-view-id>
+			</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+			<from-view-id>inventarioUsuario.xhtml</from-view-id>
+			<navigation-case>
+			<from-outcome>consultas_view</from-outcome>
+			<to-view-id>consulInvUsuario.xhtml</to-view-id>
+			</navigation-case>
+	</navigation-rule>
+	</faces-config>

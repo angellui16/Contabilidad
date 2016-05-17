@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14470292046230" configfile="/InventarioSalud/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="*" x="122" y="562" id="pf14470294562641" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf14470294562652" path="*"/>
+  <nodes xsi:type="pageflow:PFPage" name="login.xhtml" x="338" y="562" id="pf14470294562663" referenceLink="//@navigationRule.1/@navigationCase.1/@toViewId|" outlinks="pf14470294562674 pf14470294562675" inlinks="pf14470294562652 pf14470294562675" path="login.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="mainMenu.xhtml" x="554" y="562" id="pf14470294562686" referenceLink="//@navigationRule.2/@fromViewId|" outlinks="pf14470294562687 pf14470294562688 pf14470294562689 pf144702945626810 pf144702945626811" inlinks="pf14470294562674" path="mainMenu.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="inventarioAdminMedicina.xhtml" x="770" y="178" id="pf144702945626812" referenceLink="//@navigationRule.4/@fromViewId|" outlinks="pf144702945626813" inlinks="pf14470294562687 pf144702945626811" path="inventarioAdminMedicina.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="inventarioUsuario.xhtml" x="770" y="562" id="pf144702945626814" referenceLink="//@navigationRule.4/@fromViewId|" outlinks="pf144702945626915" inlinks="pf14470294562688" path="inventarioUsuario.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="catalogosAdmin.xhtml" x="770" y="946" id="pf144702945626916" referenceLink="//@navigationRule.2/@navigationCase.2/@toViewId|" inlinks="pf14470294562689" path="catalogosAdmin.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="inventarioAdminMobiliario.xhtml" x="770" y="1330" id="pf144702945626917" referenceLink="//@navigationRule.4/@fromViewId|" outlinks="pf144702954317722" inlinks="pf144702945626810" path="inventarioAdminMobiliario.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="consulInvAdmon.xhtml" x="986" y="178" id="pf144702945627019" referenceLink="//@navigationRule.4/@navigationCase.0/@toViewId|" inlinks="pf144702945626813" path="consulInvAdmon.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="consulInvUsuario.xhtml" x="986" y="562" id="pf144702945627020" referenceLink="//@navigationRule.4/@navigationCase.0/@toViewId|" inlinks="pf144702945626915" path="consulInvUsuario.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="consulMobiliaAdmon.xhtml" id="pf144702954317823" referenceLink="//@navigationRule.4/@navigationCase.0/@toViewId|" inlinks="pf144702954317722" path="consulMobiliaAdmon.xhtml"/>
+  <links id="pf14470294562652" target="pf14470294562663" source="pf14470294562641" outcome="login_view"/>
+  <links id="pf14470294562674" target="pf14470294562686" source="pf14470294562663" outcome="mian_menu_view"/>
+  <links id="pf14470294562687" target="pf144702945626812" source="pf14470294562686" outcome="inv_medicina_view"/>
+  <links id="pf14470294562688" target="pf144702945626814" source="pf14470294562686" outcome="inveUsuario_view"/>
+  <links id="pf14470294562689" target="pf144702945626916" source="pf14470294562686" outcome="medicamento_View"/>
+  <links id="pf144702945626810" target="pf144702945626917" source="pf14470294562686" outcome="mobiliario_view"/>
+  <links id="pf144702945626811" target="pf144702945626812" source="pf14470294562686" outcome="medicina_view"/>
+  <links id="pf144702945626813" target="pf144702945627019" source="pf144702945626812" outcome="consultas_view"/>
+  <links id="pf144702945626915" target="pf144702945627020" source="pf144702945626814" outcome="consultas_view"/>
+  <links id="pf14470294562675" target="pf14470294562663" source="pf14470294562663" outcome="login_view">
+    <bendPoints d1Height="-36" d2Height="-36"/>
+    <bendPoints d1Width="-64" d1Height="-36" d2Width="-64" d2Height="-36"/>
+    <bendPoints d1Width="-64" d2Width="-64"/>
+  </links>
+  <links id="pf144702954317722" target="pf144702954317823" source="pf144702945626917" outcome="consultas_view2"/>
+</pageflow:Pageflow>

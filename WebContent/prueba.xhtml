@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:h="http://java.sun.com/jsf/html"
+		xmlns:f="http://java.sun.com/jsf/core"
+		xmlns:ui="http://java.sun.com/jsf/facelets"
+		xmlns:p="http://primefaces.org/ui">
+
+	<h:head>
+	
+		
+	</h:head>
+
+ <p:growl id="mensajes" showDetail="true" life="5000" />
+ 
+ 	
+	<h:body>
+		<h:form id="form">
+		<p:dialog header="Modificar" widgetVar="dlg1" minHeight="40">
+   		
+   		<p:outputLabel value="Primer Nombre"/>&nbsp;&nbsp;
+   		<p:inputText value="#{cliente.modificar.primerNombre}"></p:inputText><br/>
+   		<p:outputLabel value="Segundo Nombre"/>&nbsp;&nbsp;
+   		<p:inputText value="#{cliente.modificar.segundoNombre}"></p:inputText><br/>
+   		<p:outputLabel value="Primer Apellido"/>&nbsp;&nbsp;
+   		<p:inputText value="#{cliente.modificar.primerApellido}"></p:inputText><br/>
+   		<p:outputLabel value="Segundo Apellido"/>&nbsp;&nbsp;
+   		<p:inputText value="#{cliente.modificar.segundoApellido}"></p:inputText><br/>
+   		<p:outputLabel value="Direccion Apellido"/>&nbsp;&nbsp;
+   		<p:inputText value="#{cliente.modificar.direccion}"></p:inputText><br/>
+   		 <p:commandButton  actionListener="#{cliente.actualizar}" value="Actualizar cliente" update=":form,:mensajes"  />
+	</p:dialog>
+		
+		<p:dialog header="Insertar" widgetVar="dlg2" minHeight="40">
+   		
+   		<p:outputLabel value="Primer Nombre"/>&nbsp;&nbsp;
+   		<p:inputText value="#{cliente.insertar.primerNombre}"></p:inputText><br/>
+   		<p:outputLabel value="Segundo Nombre"/>&nbsp;&nbsp;
+   		<p:inputText value="#{cliente.insertar.segundoNombre}"></p:inputText><br/>
+   		<p:outputLabel value="Primer Apellido"/>&nbsp;&nbsp;
+   		<p:inputText value="#{cliente.insertar.primerApellido}"></p:inputText><br/>
+   		<p:outputLabel value="Segundo Apellido"/>&nbsp;&nbsp;
+   		<p:inputText value="#{cliente.insertar.segundoApellido}"></p:inputText><br/>
+   		<p:outputLabel value="Direccion Apellido"/>&nbsp;&nbsp;
+   		<p:inputText value="#{cliente.insertar.direccion}"></p:inputText><br/>
+   		 <p:commandButton  actionListener="#{cliente.insertarCliente}" value="Insertar cliente" update=":form,:mensajes"  />
+	</p:dialog>
+		 <p:commandButton update="form" actionListener="#{cliente.llenaClientes}" value="Llenar listado de clientes"  />
+		 <p:commandButton value="Insertar" onclick="PF('dlg2').show();" />
+		 <p:commandButton value="Modificar" onclick="PF('dlg1').show();" />
+		<p:dataTable value="#{cliente.listaClients}"
+		var="item"
+		scrollable="true" paginator="true" paginatorPosition="bottom"
+		pageLinks="4"
+		rowKey="#{item}"
+		selectionMode="single"
+		selection="#{cliente.selection}"
+		>
+		
+		<p:column headerText="nombre">
+		#{item.primerNombre}   #{item.segundoNombre}
+		</p:column>
+		<p:column headerText="apellido">
+		 #{item.primerApellido}   #{item.segundoApellido}
+		</p:column>
+		<p:column headerText="direccion">
+		 #{item.direccion}
+		</p:column>
+		</p:dataTable>
+		</h:form>
+	</h:body>
+	</html>
