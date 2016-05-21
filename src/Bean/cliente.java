@@ -13,6 +13,16 @@ import java.util.List;
 @ManagedBean
 @SessionScoped
 public class cliente {
+	
+	
+	
+	public void mostrarAction()
+	{
+		System.out.println("llego aqui");
+	  	
+		
+	}
+
 /*private	List<modelos.cliente> listaClients = new ArrayList<modelos.cliente>();
 private modelos.cliente selection = null;
 private modelos.cliente modificar = new modelos.cliente();

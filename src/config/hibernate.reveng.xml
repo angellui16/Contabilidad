@@ -2,5 +2,8 @@
 <!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
 
 <hibernate-reverse-engineering>
-  <table-filter match-catalog="contabilidad" match-name="catalogo_cuenta"/>
+  <table-filter match-catalog="contabilidad" match-name="catalogo"/>
+  <table-filter match-catalog="contabilidad" match-name="detalle_partida"/>
+  <table-filter match-catalog="contabilidad" match-name="partida"/>
+  <table-filter match-catalog="contabilidad" match-name="perioco_contable"/>
 </hibernate-reverse-engineering>
